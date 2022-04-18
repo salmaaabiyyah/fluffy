@@ -1,0 +1,50 @@
+extends ../layout/base
+block content
+    section.content-header
+        h1
+            | Tambah boneka 
+           
+    section.content
+        .box
+            .box-header.with-border
+                
+                .box-tools.pull-right
+                    button(type='button', data-widget='collapse', data-toggle='tooltip',title='collapse').btn.btn-box-tool
+                        i.fa.fa-minus
+
+            .box-body
+                form(role='form',method='post' action='/fluffy/add')
+                    .row
+
+                        .col-xs-6
+                            .box-body
+                                - if (messages.msg_error)
+                                    .alert.alert-danger.alert-dismissable
+                                        button.close(type='button', data-dismiss='alert', aria-hidden='true')
+                                            | ×
+                                        h4
+                                            i.icon.fa.fa-ban
+                                            | Alert!
+                                        | !{messages.msg_error}
+                                .form-group
+                                    label
+                                        | Nama
+                                    input(type='text',value='#{nama}',name='nama',placeholder='Masukkan nama boneka', autofocus).form-control
+                                .form-group
+                                    label
+                                        | Stok
+                                    input(type='text',name='stok',placeholder='Masukkan stok boneka').form-control
+                                .form-group
+                                    label
+                                        | Harga
+                                    input(type='text',value='#{harga}',name='harga',placeholder='Masukkan harga boneka').form-control
+                                .form-group
+                                    label
+                                        | Jenis
+                                    input(type='text',name='jenis',placeholder='Masukkan jenis boneka').form-control
+                            .box-footer
+                                button(type='submit').btn.btn-primary
+                                    | Submit
+
+                                a(href='/fluffy').btn.btn-primary.pull-right
+                                    | Back

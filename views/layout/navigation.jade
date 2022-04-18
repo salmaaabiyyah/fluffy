@@ -1,0 +1,33 @@
+header.main-header
+    a(href='/').logo
+        span.logo-mini
+            <b>Bay</b>
+        span.logo-lg
+            <b>BAYU</b>
+    nav(role='navigation').navbar.navbar-static-top
+        a(href='#', role='button', data-toggle='offcanvas').sidebar-toggle.fa6.sidebar-mini
+            span.sr-only Toggle Navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        div.navbar-custom-menu
+            ul.nav.navbar-nav
+
+                    li.dropdown.user.user-menu
+                        a(href='#',data-toggle='dropdown').dropdown-toggle
+                            img(src='/adminlte/dist/img/avatar.png',alt='UserImage').user-image
+                            span.hidden-xs
+                                | Fluffy Puffy
+                        ul.dropdown-menu
+                            li.user-header
+                                img(src='/adminlte/dist/img/avatar.png',alt='UserImage').img-circle
+                                p
+                                    | Fluffy Puffy
+                                    small
+                                        | Sejak 2022
+                            
+                            li.user-footer
+                                
+                                .pull-right
+                                    a(href='/logout').btn.btn-default.btn-flat
+                                        | Sign out
